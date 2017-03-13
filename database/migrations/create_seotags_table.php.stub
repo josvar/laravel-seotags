@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateSeoTagsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up()
+    {
+        Schema::create('seotags', function (Blueprint $table) {
+            $table->increments('id');
+            $table->morphs('seoable');
+
+            $table->json('meta');
+            $table->json('og');
+            $table->json('twitter');
+
+            $table->nullableTimestamps();
+        });
+    }
+    /**
+     * Reverse the migrations.
+     */
+    public function down()
+    {
+        Schema::dropIfExists('seotags');
+    }
+}

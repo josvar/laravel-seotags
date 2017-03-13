@@ -1,0 +1,53 @@
+{
+    "name": "josvar/laravel-seotags",
+    "type": "library",
+    "description": "Associate seo tags with Eloquent models.",
+    "keywords": [
+        "josvar",
+        "laravel-seotags",
+        "seo",
+        "meta",
+        "open-graph"
+    ],
+    "homepage": "https://github.com/josvar/laravel-seotags",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josue Vargas",
+            "email": "jos.vargasv@gmail.com",
+            "homepage": "https://github.com/josvar",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~5.6|~7.0",
+        "illuminate/database": "^5.4",
+        "illuminate/support": "^5.4"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "~4.0||~5.0",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Josvar\\SeoTags\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Josvar\\SeoTags\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
